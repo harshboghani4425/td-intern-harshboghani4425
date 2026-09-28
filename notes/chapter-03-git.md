@@ -21,7 +21,7 @@ Git is the engine; GitHub is where the team meets. You can use Git without GitHu
 | Concept | Meaning | Example |
 |---|---|---|
 | **Repository** | A project folder whose full history Git tracks | `td-intern-<username>` |
-| **Working tree** | The files as they are on your disk right now, including unsaved-to-Git edits | editing `profile.md` in VS Code |
+| **Working tree** | The files as they are on your disk right now, including changes that are not yet staged or committed | editing `profile.md` in VS Code |
 | **Staging area** | The set of changes chosen for the next commit | `git add profile.md` |
 | **Commit** | A saved snapshot with a message, an author and a unique hash | `docs: add intern profile` |
 | **Branch** | An independent line of work that starts from another branch | `issue-1-chapter-03-git-workflow` |
