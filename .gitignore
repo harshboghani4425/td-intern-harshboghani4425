@@ -1,0 +1,28 @@
+# ---- Environment files and secrets (never commit) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials*.json
+
+# ---- Dependencies ----
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# ---- Build output and logs ----
+dist/
+build/
+*.log
+
+# ---- Editor and OS files ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
