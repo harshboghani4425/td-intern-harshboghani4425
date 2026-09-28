@@ -101,6 +101,8 @@ Branch protection rules stop risky changes to important branches. For `main` in 
 - force pushes and branch deletion are blocked, so history cannot be rewritten or lost
 - the rules also apply to administrators, so the owner follows the same process
 
+The number of required approvals is set to **0**. GitHub does not let the author of a pull request approve it, so in a one-person repository a required approval could never be given and `main` would be locked. The review still happens: it is recorded as review comments, and the conversation-resolution rule blocks the merge until every comment has been addressed. When a mentor or teammate can review, required approvals should be raised to 1.
+
 Required status checks (for example automated tests) are added once a repository has CI. This repository has no CI yet, so there are no checks to require.
 
 ## 8. `.gitignore`, `.env` and `.env.example`
