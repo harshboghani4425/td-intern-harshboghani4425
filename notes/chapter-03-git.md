@@ -130,8 +130,11 @@ git diff --staged                   # review exactly what will be committed
 git commit -m "docs: <message>"     # save a snapshot
 git push -u origin <branch>         # publish the branch and track it
 git switch main && git pull         # update main after the PR is merged
-git branch -d <branch>              # delete a merged local branch
+git branch -d <branch>              # delete a local branch whose commits are on main
+git branch -D <branch>              # delete a squash-merged local branch (see note)
 ```
+
+After a **squash merge**, the branch's own commits are not on `main`: GitHub creates one new commit instead. `git branch -d` may therefore refuse with "not fully merged", especially after `git fetch --prune`. Once the pull request shows **Merged**, the work is safely on `main` and `git branch -D <branch>` is the expected way to remove the local branch. Do not use `-D` on a branch whose pull request has not been merged.
 
 ## 10. Common mistakes and safe fixes
 
